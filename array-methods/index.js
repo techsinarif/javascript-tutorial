@@ -13,10 +13,9 @@ const products = [
 // Array.prototype.filter(): Creates new arry that passes the test implemented in the provided call back function. 
 //  This doesn't alters the original array.
 
-// Syntax: filter((item, index, array)=>{}, thisArg) 
+// Syntax: filter((item, index, array)=>{}, thisArg)
 
 const filteredItem = products.filter((product) => {
-
   return product.price > 600
 });
 console.log('Array.prototype.filter()');
@@ -32,7 +31,7 @@ const updatedProductPrice = products.map((product) => {
   const products = {productId: product.productId, name: product.name, price: product.price * 2 };
   return products;
 });
-console.log('Array.prototype.map()');
+console.log('Array.prototype.map()'); 
 console.log('updatedProductPrice', updatedProductPrice);
 console.log('original products', products);
 console.log('======================');
@@ -68,9 +67,9 @@ console.log('======================');
 // item: required => current item of the array.
 
 const arr = [1,2,3,4,5];
-const sum = arr.reduce((accumulator, item, index) => {
+const sum = arr.reduce((accumulator, item, index) => {                                              
   console.log(`iteration numer ${index} and the accumulator is ${accumulator}`);
   return accumulator + item;
 }, 5);
 console.log('Array.prototype.reduce()');
-console.log('Accumulated / total: ', sum); 
+console.log('Accumulated / total: ', sum);
